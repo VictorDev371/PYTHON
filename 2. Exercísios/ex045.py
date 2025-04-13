@@ -1,44 +1,53 @@
-print('-=-'*20)
-print('JOKENPÔ - TENTE GANHAR DE MIM - HAHAHA')
-print('-=-'*20)
-
+#bibliotecas
+import emoji
 import random
 import time
-lista = ["PAPEL!", "TESOURA!", "PEDRA!"]
+
+#introdução
+print('\033[34m-=-\033[m'*15)
+print('\033[34m       JOKENPÔ - TENTE GANHAR DE MIM\033[m')
+print('\033[34m-=-\033[m'*15)
+lista = ["PAPEL", "TESOURA", "PEDRA"]
+validas = ["PAPEL", "TESOURA", "PEDRA"]
 maquina = random.choice(lista)
+print('\033[33mSEJA BEM VINDO! ao JOKENPÔ no Terminal\033[m')
 nome = str(input('Qual o seu nome, jogador(a): '))
-print('''
-    -=-=- TÁBELA DE ESCOLHAS -=-=-
-      
-      - Papel   - 
-      - Tesoura -
-      - Pedra   -
 
-      Obs: Digite apenas o nome. ex: "Papel"
-    -=-=-  FIM DAS ESCOLHAS  -=-=-
-''')
-jogador = str(input(f'Escolha sua jogada jogador(a) {nome} : '))
-print('Eu escolhi...')
+#meio
+print(emoji.emojize('''
+\033[34m-=-=-=-=- TÁBELA DE ESCOLHAS -=-=-=-=-\033[m\n
+      - \033[37mPedra\033[m     [:rock:  ] 
+      - Papel     [:newspaper: ]
+      - \033[36mTesoura\033[m   [:scissors:  ] \n
+      \033[35mObs: Digite apenas o nome.\033[m\n
+\033[34m-=-=-=-=- FIM DAS ESCOLHAS  -=-=-=-=-\033[m
+'''))
+
+#meio fim 
+jogador = input(f'\033[36mEscolha sua jogada , jogador(a) {nome} :\033[m ').strip().upper()
+print(f'Sua jogada foi \033[33m{jogador}\033[m, vamos vêr a que eu escolhi...')
+print('Jo...')
 time.sleep(2)
-print(maquina)
+print('Ken...')
+time.sleep(1)
+print('PÔ!')
+print(f'\033[33m{maquina}\033[m')
 
-if maquina == 'PAPEL!' and jogador == 'Papel' or maquina == 'PEDRA!' and jogador == 'Pedra' or maquina == 'TESOURA!' and jogador == 'Tesoura':
-    print('Putz... Deu empate... VAMOS OUTRA VEZ!')
-elif maquina == 'PEDRA!' and jogador == 'Tesoura':
-    print('HAHAHA, EU GANHEI!, TENTE NOVAMENTE PERDEDOR.')
-elif maquina == 'PEDRA!' and jogador == 'Papel':
-    print('Impossivel... Eu perdi... Como...')
-    time.sleep(2)
-    print(f'PARABÉNS JOGADOR {nome}')
-elif maquina == 'PAPEL!' and jogador == 'Pedra':
-    print('HAHAHA, EU GANHEI!, TENTE NOVAMENTE PERDEDOR.')
-elif maquina == 'PAPEL!' and jogador == 'Tesoura':
-    print('Impossivel... Eu perdi... Como...')
-    time.sleep(2)
-    print(f'PARABÉNS JOGADOR {nome}')
-elif maquina == 'TESOURA!' and jogador == 'Papel':
-    print('HAHAHA, EU GANHEI!, TENTE NOVAMENTE PERDEDOR.')
-elif maquina == "TESOURA!" and jogador == 'Pedra':
-    print('Impossivel... Eu perdi... Como...')
-    time.sleep(2)
-    print(f'PARABÉNS JOGADOR {nome}')
+#fim
+if jogador not in validas:
+    print('Você digitou algo errado que está fora da tabela, revise e tente novamente!')
+else:
+    if maquina == jogador:
+        print('Infelizmente deu \033[31mempate\033[m :/ , vamos outra vez!')
+    elif maquina != jogador:
+        if (maquina == 'PEDRA' and jogador == 'TESOURA') or \
+           (maquina == 'PAPEL' and jogador == 'PEDRA') or \
+           (maquina == 'TESOURA' and jogador == 'PAPEL'):
+            print('HA, eu ganhei, \033[31mtente novamente\033[m :>')
+        else:
+            print('Impossivel... \033[32mPARABÉNS\033[m JOGADOR :)')
+
+
+
+
+

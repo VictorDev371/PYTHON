@@ -3,8 +3,8 @@ n2 = float(input('Segunda nota do aluno: '))
 media = (n1+n2)/2
 
 if media < 5:
-    print('Infelizmente o aluno foi reprovado, #triste')
-elif media >= 5 and media <= 6.9:
-    print('O aluno deverá ir para a recuperação, #ansiedade')
+    print(f'Infelizmente o aluno foi reprovado com media {media}, #triste')
+elif 7 > media >= 5:
+    print(f'O aluno deverá ir para a recuperação com media {media:.1f}, #ansiedade')
 else:
-    print('ALUNO FOI APROVADO COM SUCESSO!!!, #superfeliz')
+    print(f'ALUNO FOI APROVADO COM SUCESSO COM MEDIA DE {media:.1f}!!!, #superfeliz')

@@ -6,7 +6,6 @@ prest = valor_casa/Anos
 porcentagem = (salario*30)/100
 
 print('O valor da sua casa R${}, ficara com o respectivo valor R${:.2f}, sendo parcelada em {} meses'.format(valor_casa, prest, Anos))
-
 if prest >= porcentagem:
     print('Você não foi aprovado para o emprestimo')
 else:
