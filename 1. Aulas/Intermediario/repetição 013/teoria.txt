@@ -1,0 +1,5 @@
+- LAÇOS/REPETIÇÃO - 
+
+for c in range(1, 10, 2): (o 2 significa os saltos)
+    passo
+pega  
