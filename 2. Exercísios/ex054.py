@@ -10,4 +10,4 @@ for c in range(7):
         maioridade += 1
     else:
         menoridade += 1
-print(f'No total ainda faltam {menoridade} pessoas para atingir a maioridade, mas já tem {maioridade} pessoas de maiores')
+print(f'No total ainda faltam {menoridade} pessoas para atingir a maioridade, \nMas já tem {maioridade} pessoas de maiores')

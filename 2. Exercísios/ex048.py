@@ -1,5 +1,8 @@
 s = 0
-for c in range(1, 501):
-    if (c%2==1) and (c%3==0):
+n = 0
+for c in range(1, 501, 2):
+    if (c%3==0):
         s += c
+        n += 1
 print(f'O resultado foi de {s}')
+print(f'Foram solicitados {n}')
