@@ -1,12 +1,13 @@
-numero = int(input('Me informe o número do fatorial: '))
-multiplicador = numero-1
-resultado = 0
+from math import factorial
 
-while multiplicador != 0:
-    if multiplicador == numero-1:
-        resultado = numero * multiplicador
+numero = int(input('Me informe o número do fatorial: '))
+numero2 = numero
+x = True
+while numero2 != 1:
+    if x:
+        print(f'{numero2} ', end='')
+        x = False
     else:
-        multiplicador -= 1
-        tot = resultado * multiplicador
-    print(f'{resultado}')
-print(f'O resultado final foi de:{tot}')
+        numero2 -= 1
+        print(f'x {numero2} ', end='')
+print(f'= {factorial(numero)}', end='')
