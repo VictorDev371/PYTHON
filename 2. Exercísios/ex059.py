@@ -6,11 +6,11 @@ n2 = float(input('Valor do segundo número: '))
 
 while resp != 5:
     print(''' - TABELA -
-[1] Somar
-[2] Múltiplicar
-[3] Maior
-[4] Novos Números
-[5] Sair do Programa
+    [1] Somar
+    [2] Múltiplicar
+    [3] Maior
+    [4] Novos Números
+    [5] Sair do Programa
     ''')
     resp = float(input(f'Oque você deseja realizar com {n1} e {n2}?: '))
 

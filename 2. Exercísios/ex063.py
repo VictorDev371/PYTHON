@@ -7,7 +7,7 @@ print('- SEQUENCIA DE FIBONACCI ABAIXO -')
 print('0', end='')
 
 c = 1
-while c <= n:
+while c <= n-1:
     if c == 1:
         n3 = n1 + n2
         print(f' > {n3}', end='')
